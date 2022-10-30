@@ -33,14 +33,17 @@ namespace MasudUniversity.Controllers
         {
             if (id == null)
             {
-                return NotFound();
+                
+                //return NotFound();
             }
 
             var student = await _context.Students
                 .FirstOrDefaultAsync(m => m.StudentId == id);
             if (student == null)
             {
-                return NotFound();
+                Response.StatusCode = 404;
+                return View("StudentNotFound", id);
+                // return NotFound();
             }
 
             return View(student);

@@ -1026,3 +1026,5 @@ E:\MasudUniversity\MasudUniversity\obj\Debug\netcoreapp3.1\MasudUniversity.cspro
 E:\MasudUniversity\MasudUniversity\obj\Debug\netcoreapp3.1\MasudUniversity.dll
 E:\MasudUniversity\MasudUniversity\obj\Debug\netcoreapp3.1\MasudUniversity.pdb
 E:\MasudUniversity\MasudUniversity\obj\Debug\netcoreapp3.1\MasudUniversity.genruntimeconfig.cache
+E:\MasudUniversity\MasudUniversity\obj\Debug\netcoreapp3.1\Razor\Views\Instructors\InsNotFound.cshtml.g.cs
+E:\MasudUniversity\MasudUniversity\obj\Debug\netcoreapp3.1\Razor\Views\Students\StudentNotFound.cshtml.g.cs

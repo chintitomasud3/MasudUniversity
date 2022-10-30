@@ -39,7 +39,7 @@ namespace MasudUniversity.Controllers
                 .FirstOrDefaultAsync(m => m.DepartmentID == id);
             if (department == null)
             {
-                return NotFound();
+               return NotFound();
             }
 
             return View(department);

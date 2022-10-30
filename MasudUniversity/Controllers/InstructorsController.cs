@@ -70,11 +70,14 @@ namespace MasudUniversity.Controllers
                 return NotFound();
             }
 
+
             var instructor = await _context.Instructors
                 .FirstOrDefaultAsync(m => m.ID == id);
             if (instructor == null)
             {
-                return NotFound();
+                Response.StatusCode = 404;
+                return View("InsNotFound", id);
+                // return NotFound();
             }
 
             return View(instructor);
