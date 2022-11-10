@@ -1,4 +1,6 @@
 using MasudUniversity.Data;
+using MasudUniversity.Repositories;
+using MasudUniversity.Repositories.interfaces;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -36,9 +38,13 @@ namespace MasudUniversity
             services.AddControllersWithViews().AddNewtonsoftJson(x =>
              x.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore); ;
 
+           // services.AddMvc();
+            
+
 
 
             services.AddRazorPages();
+            services.AddTransient<IEmployeeRepositories, EmployeeRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

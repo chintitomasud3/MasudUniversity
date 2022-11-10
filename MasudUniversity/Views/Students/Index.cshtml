@@ -89,3 +89,41 @@
 }
     </tbody>
 </table>
+
+<h2 id="stdname">1</h2>
+
+
+<button id="click me"> click me</button>
+@section scripts {
+
+    <script>
+
+        $("button").click(function(){
+        
+           $.ajax({
+                url: "/Students/StudentList",
+                method:"GET",
+                success:function(data){
+
+                    console.log(data[0].email);
+                    $("#stdname").text(data[0].email).click(function(){
+                     $("#stdname").addClass("btn btn-primary");
+                    });
+                    
+
+
+                },
+                error:function(err){
+                  console.log(err);
+                }
+
+
+           
+           
+           })
+        
+        })
+
+    </script>
+
+}

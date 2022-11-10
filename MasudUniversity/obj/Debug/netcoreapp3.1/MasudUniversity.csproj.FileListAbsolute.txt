@@ -1028,3 +1028,8 @@ E:\MasudUniversity\MasudUniversity\obj\Debug\netcoreapp3.1\MasudUniversity.pdb
 E:\MasudUniversity\MasudUniversity\obj\Debug\netcoreapp3.1\MasudUniversity.genruntimeconfig.cache
 E:\MasudUniversity\MasudUniversity\obj\Debug\netcoreapp3.1\Razor\Views\Instructors\InsNotFound.cshtml.g.cs
 E:\MasudUniversity\MasudUniversity\obj\Debug\netcoreapp3.1\Razor\Views\Students\StudentNotFound.cshtml.g.cs
+E:\MasudUniversity\MasudUniversity\obj\Debug\netcoreapp3.1\Razor\Views\Employees\Create.cshtml.g.cs
+E:\MasudUniversity\MasudUniversity\obj\Debug\netcoreapp3.1\Razor\Views\Employees\Delete.cshtml.g.cs
+E:\MasudUniversity\MasudUniversity\obj\Debug\netcoreapp3.1\Razor\Views\Employees\Details.cshtml.g.cs
+E:\MasudUniversity\MasudUniversity\obj\Debug\netcoreapp3.1\Razor\Views\Employees\Edit.cshtml.g.cs
+E:\MasudUniversity\MasudUniversity\obj\Debug\netcoreapp3.1\Razor\Views\Employees\Index.cshtml.g.cs

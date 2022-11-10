@@ -9,6 +9,7 @@ using Microsoft.EntityFrameworkCore;
 using MasudUniversity.Data;
 using MasudUniversity.Models;
 using Microsoft.AspNetCore.Authorization;
+using Newtonsoft.Json;
 
 namespace MasudUniversity.Controllers
 {
@@ -215,6 +216,7 @@ namespace MasudUniversity.Controllers
         }
         public  JsonResult StudentList() {
 
+            var json = JsonConvert.SerializeObject(_context.Students.ToList());
             return Json(_context.Students.ToList());
         }
         

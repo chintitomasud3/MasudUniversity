@@ -1,10 +1,13 @@
-﻿using MasudUniversity.Models;
+﻿using MasudUniversity.Data;
+using MasudUniversity.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Runtime.InteropServices.WindowsRuntime;
 using System.Threading.Tasks;
 
 namespace MasudUniversity.Controllers
@@ -12,15 +15,17 @@ namespace MasudUniversity.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-
-        public HomeController(ILogger<HomeController> logger)
+        private readonly ApplicationDbContext _context;
+        public HomeController(ApplicationDbContext context)
         {
-            _logger = logger;
+            _context=context;
         }
 
-        public IActionResult Index()
+        public JsonResult Index()
         {
-            return View();
+            var json = JsonConvert.SerializeObject(_context.Students.ToList());
+            return Json(json);
+            
         }
 
         public IActionResult Privacy()

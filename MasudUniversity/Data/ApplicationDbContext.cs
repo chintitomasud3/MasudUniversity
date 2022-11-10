@@ -13,6 +13,7 @@ namespace MasudUniversity.Data
             : base(options)
         {
         }
+        
 
         public DbSet<Course> Courses { get; set; }
         public DbSet<Enrollment> Enrollments { get; set; }
@@ -22,6 +23,8 @@ namespace MasudUniversity.Data
         public DbSet<OfficeAssignment> OfficeAssignments { get; set; }
         public DbSet<CourseAssignment> CourseAssignments { get; set; }
         public DbSet<StudentAddress> StudentAddresses { get; set; }
+        public DbSet<Employee> Employees { get; set; }
+        public DbSet<EmpDepartment> EmpDepartments { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
