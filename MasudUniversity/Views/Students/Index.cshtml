@@ -9,9 +9,19 @@
 <p class="d-flex justify-content-end">
     <a class="btn btn-primary" asp-action="Create">Create New</a>
 </p>
+@using (Html.BeginForm())
+{
+    <p>
+        Find by name or Email: @Html.TextBox("SearchString")
+        <input type="submit" value="Search" />
+    </p>
+}
 <table class="table table-hover table-bordered table-striped">
     <thead class="thead-dark">
         <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.StudentId)
+            </th>
             <th>
                 @Html.DisplayNameFor(model => model.StudentName)
             </th>
@@ -48,6 +58,9 @@
     <tbody>
 @foreach (var item in Model) {
         <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.StudentId)
+                </td>
             <td>
                 @Html.DisplayFor(modelItem => item.StudentName)
             </td>

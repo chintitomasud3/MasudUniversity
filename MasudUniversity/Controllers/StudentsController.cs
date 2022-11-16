@@ -24,9 +24,21 @@ namespace MasudUniversity.Controllers
         }
 
         // GET: Students
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string searchString)
         {
-            return View(await _context.Students.ToListAsync());
+            
+            
+            var students = from s in _context.Students
+                           select s;
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                students = students.Where(s => s.StudentName.Contains(searchString)
+                                       || s.Email.Contains(searchString)||s.PhoneNumber.Contains(searchString));
+            }
+            
+
+
+            return View(await students.ToListAsync());
         }
 
         // GET: Students/Details/5
