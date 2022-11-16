@@ -24,16 +24,26 @@ namespace MasudUniversity.Controllers
         }
 
         // GET: Students
-        public async Task<IActionResult> Index(string searchString)
+        public async Task<IActionResult> Index(string searchString,int page=1)
         {
-            
-            
-            var students = from s in _context.Students
-                           select s;
+
+
+            //var students = from s in _context.Students
+            //               select s;
+
+            var students = _context.Students.OrderBy(s => s.StudentId).Skip((page - 1) * 5).Take(5);
+            int totalPages = (int)Math.Ceiling((double)_context.Students.Count() / 5);
+            ViewBag.Total = totalPages;
+            ViewBag.currentPage = page;
             if (!String.IsNullOrEmpty(searchString))
             {
-                students = students.Where(s => s.StudentName.Contains(searchString)
-                                       || s.Email.Contains(searchString)||s.PhoneNumber.Contains(searchString));
+                //students = students.Where(s => s.StudentName.Contains(searchString)
+                //                       || s.Email.Contains(searchString)||s.PhoneNumber.Contains(searchString));
+              var  studentss = _context.Students.Where(s => s.StudentName.Contains(searchString)
+                                           || s.Email.Contains(searchString) || s.PhoneNumber.Contains(searchString));
+
+                return View(await studentss.ToListAsync());
+
             }
             
 

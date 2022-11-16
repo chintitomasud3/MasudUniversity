@@ -103,6 +103,27 @@
     </tbody>
 </table>
 
+<div class="d-flex justify-content-end">
+    <ul class="pagination pagination-sm">
+        @for (int i = 1; i <= ViewBag.Total; i++)
+        {
+            if (i == ViewBag.currentPage)
+            {
+                <li class="page-item active">
+                    @Html.ActionLink(i.ToString(), "Index", "Students", new { page = i }, new { @class = "page-link" })
+                </li>
+            }
+            else
+            {
+                <li class="page-item">
+                    @Html.ActionLink(i.ToString(), "Index", "Students", new { page = i }, new { @class = "page-link" })
+                </li>
+            }
+
+        }
+    </ul>
+</div>
+
 @*<h2 id="stdname">1</h2>
 
 
