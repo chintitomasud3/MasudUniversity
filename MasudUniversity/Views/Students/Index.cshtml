@@ -6,11 +6,11 @@
 
 <h1>Index</h1>
 
-<p>
-    <a asp-action="Create">Create New</a>
+<p class="d-flex justify-content-end">
+    <a class="btn btn-primary" asp-action="Create">Create New</a>
 </p>
-<table class="table">
-    <thead>
+<table class="table table-hover table-bordered table-striped">
+    <thead class="thead-dark">
         <tr>
             <th>
                 @Html.DisplayNameFor(model => model.StudentName)
@@ -90,13 +90,13 @@
     </tbody>
 </table>
 
-<h2 id="stdname">1</h2>
+@*<h2 id="stdname">1</h2>
 
 
-<button id="click me"> click me</button>
+<button id="click me"> click me</button>*@
 @section scripts {
 
-    <script>
+    @*<script>
 
         $("button").click(function(){
         
@@ -124,6 +124,6 @@
         
         })
 
-    </script>
+    </script>*@
 
 }

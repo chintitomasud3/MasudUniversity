@@ -21,11 +21,17 @@ namespace MasudUniversity.Controllers
             _context=context;
         }
 
-        public JsonResult Index()
-        {
-            var json = JsonConvert.SerializeObject(_context.Students.ToList());
-            return Json(json);
+        //public JsonResult Index()
+        //{
+        //    var json = JsonConvert.SerializeObject(_context.Students.ToList());
+        //    return Json(json);
             
+        //}
+        public IActionResult Index()
+        {
+            
+            return View();
+
         }
 
         public IActionResult Privacy()
