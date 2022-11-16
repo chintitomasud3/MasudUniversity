@@ -14,16 +14,20 @@ namespace MasudUniversity.Models
         [Key]
         public int StudentId { get; set; }
         [Required]
+        [Display(Name ="Student Name")]
         public string StudentName { get; set; }
 
         public Gender? Gender { get; set; }
         public string Nationality { get; set; }
         public string Religion { get; set; }
+        [Display(Name ="Martial Status")]
         public string MartialStatus { get; set; }
         [Required]
         public string Email { get; set; }
         [Required]
+        [Display(Name ="Phone Number")]
         public string PhoneNumber { get; set; }
+        [Display(Name ="Blood Group")]
         public string BloodGroup { get; set; }
         public DateTime DOB { get; set; }
         public string Batch { get; set; }
